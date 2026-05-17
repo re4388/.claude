@@ -1,0 +1,196 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bunx -y ccstatusline@latest --hook"
+          }
+        ]
+      },
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bunx -y ccstatusline@latest --hook"
+          }
+        ]
+      },
+      {
+        "_tag": "ccstatusline-managed",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bunx -y ccstatusline@latest --hook"
+          }
+        ],
+        "matcher": "Skill"
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bunx -y ccstatusline@latest --hook"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bunx -y ccstatusline@latest --hook"
+          }
+        ]
+      },
+      {
+        "_tag": "ccstatusline-managed",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bunx -y ccstatusline@latest --hook"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bunx -y ccstatusline@latest",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "jdtls-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "language": "Traditional Chinese",
+  "spinnerTipsEnabled": true,
+  "spinnerTipsOverride": {
+    "excludeDefault": false,
+    "tips": [
+      "Esc 中断回复，修改提示后重新发送 | Press Esc to interrupt and revise your prompt",
+      "Esc 按两次打开 /rewind 菜单，撤销代码或对话 | Press Esc twice to open /rewind menu",
+      "Shift+Tab 循环切换: 普通 → 自动接受 → 计划模式 | Shift+Tab cycles Normal → Auto-Accept → Plan",
+      "Tab 切换扩展思考开关 | Tab toggles extended thinking on/off",
+      "Ctrl+G 打开外部编辑器写多行输入 | Ctrl+G opens external editor for multi-line input",
+      "Ctrl+V 粘贴剪贴板图片给 Claude 分析 (非 Cmd+V) | Ctrl+V to paste images (not Cmd+V on Mac)",
+      "Ctrl+T 显示/隐藏任务列表 | Ctrl+T toggles task list visibility",
+      "Shift+拖拽文件到终端添加引用 | Shift+Drag files into terminal to reference them",
+      "fn+fn 触发系统语音输入 (macOS) | fn+fn for voice input on macOS",
+      "@filename 引用文件，Claude 自动读取 | @filename to reference files directly",
+      "@./src/**/*.ts 用 glob 模式引用多个文件 | @glob patterns to reference multiple files",
+      "! 前缀直接执行 shell 命令，省 token | ! prefix runs shell commands directly, saves tokens",
+      "& 前缀在后台运行任务 | & prefix runs tasks in background",
+      "# 前缀将内容保存到项目记忆 | # prefix saves content to project memory",
+      "/compact 压缩对话历史，释放上下文空间 | /compact to free up context window",
+      "/compact [指令] 可指定保留哪些信息 | /compact [instructions] to specify what to preserve",
+      "/clear 新任务前清空对话，避免浪费 token | /clear before new tasks to save tokens",
+      "/context 可视化上下文窗口使用量 | /context to visualize context window usage",
+      "/cost 查看当前会话 token 用量和费用 | /cost to check session token usage and cost",
+      "/usage 查看套餐用量和速率限制 | /usage to check plan usage and rate limits",
+      "/model 切换模型 | /model to switch between models",
+      "/fast 切换快速模式，同模型 2.5x 速度 | /fast toggles Fast Mode (same model, 2.5x speed)",
+      "/plan 进入计划模式，只读分析不改代码 | /plan for read-only planning mode",
+      "/rewind 选择性回滚对话或代码修改 | /rewind for selective rollback of conversation or code",
+      "/init 自动生成 CLAUDE.md 项目规则文件 | /init to auto-generate CLAUDE.md",
+      "/doctor 运行环境诊断，排查问题 | /doctor to run environment diagnostics",
+      "/install-github-app 启用自动 PR 审查 | /install-github-app for automatic PR reviews",
+      "/terminal-setup 配置 Shift+Enter 多行输入 | /terminal-setup enables Shift+Enter for newlines",
+      "/hooks 配置自动化钩子 | /hooks to configure automation hooks",
+      "/insights 生成使用分析报告，每月跑一次 | /insights for usage analysis; run monthly",
+      "/copy 复制上一条回复为 Markdown | /copy to copy last response as markdown",
+      "/memory 编辑 CLAUDE.md 项目记忆 | /memory to edit CLAUDE.md project memory",
+      "/sandbox 启用隔离的 bash 环境 | /sandbox for isolated bash environment",
+      "claude -p 'prompt' 非交互式运行，适合脚本和 CI/CD | claude -p for scripting and CI/CD",
+      "claude -c 继续最近一次会话 | claude -c to resume most recent session",
+      "claude -r 恢复指定历史会话 | claude -r to resume a specific session",
+      "claude --model opus 指定模型启动 | claude --model to specify model on launch",
+      "claude --max-turns 3 限制对话轮数 | claude --max-turns to limit conversation turns",
+      "claude --add-dir ../lib 添加额外工作目录 | claude --add-dir to add working directories",
+      "claude --allowedTools 预批准特定工具 | claude --allowedTools to pre-approve tools",
+      "claude --output-format json 输出 JSON 格式 | claude --output-format json for structured output",
+      "claude --mcp-debug 调试 MCP 连接问题 | claude --mcp-debug to troubleshoot MCP connections",
+      "cat file | claude -p '分析' 管道输入处理 | Pipe input: cat file | claude -p 'analyze'",
+      "CLAUDE.md 设置项目规则，每次自动加载 | CLAUDE.md for persistent project instructions",
+      "CLAUDE.md 支持层级: 全局 → 项目根 → 子目录 | CLAUDE.md works hierarchically: global → project → subdirs",
+      ".claude/commands/ 创建自定义斜杠命令 | .claude/commands/ for custom slash commands",
+      ".claude/skills/ 存放技能定义，Claude 自动调用 | .claude/skills/ for auto-invoked skill definitions",
+      "上下文 95% 时自动压缩，也可手动 /compact | Auto-compact at 95%; use /compact manually",
+      "配置优先级: 企业 → CLI参数 → 本地 → 项目 → 全局 | Config priority: managed → CLI → local → project → global",
+      "claude mcp add 添加 MCP 服务器扩展能力 | claude mcp add to extend with MCP servers",
+      "AI 上下文像牛奶，越新鲜越好，常 /clear | AI context is like milk — keep it fresh with /clear",
+      "大问题拆成小任务，Claude 表现更好 | Break large problems into smaller tasks",
+      "多写测试，用 TDD 让 Claude 自主完成任务 | Write tests + TDD for autonomous Claude tasks",
+      "重构前先进 /plan 模式分析 | Enter /plan mode before major refactoring",
+      "HANDOFF.md 记录进展，方便下次会话续接 | Write HANDOFF.md to continue across sessions",
+      "开多个终端标签页并行跑 Claude 任务 | Use multiple terminal tabs for parallel Claude tasks",
+      "用 git worktree 隔离不同功能分支的开发 | Use git worktree to isolate feature branch work",
+      "定期审查已批准的命令权限 | Audit your approved command permissions regularly",
+      "git stash -p 选择性暂存部分修改 | git stash -p for selective stashing",
+      "git reflog 找回任何删除的 commit | git reflog recovers deleted commits",
+      "git bisect 二分法定位引入 bug 的 commit | git bisect to binary-search for bugs",
+      "git worktree add 同时在多个分支工作 | git worktree for parallel branch work",
+      "git log --oneline --graph --all 查看分支图 | Pretty branch visualization",
+      "git diff --word-diff 按单词显示差异 | Word-level diff for precise changes",
+      "git cherry-pick 把别的分支的 commit 拿过来 | git cherry-pick to grab commits from other branches",
+      "git rebase -i 交互式整理 commit 历史 | git rebase -i to clean up commit history",
+      "git blame -L 10,20 file 查看指定行的修改者 | git blame -L to see who changed specific lines",
+      "git log -S 'keyword' 搜索引入某段代码的 commit | git log -S to find commits adding specific code",
+      "git diff --stat 只看修改了哪些文件和行数 | git diff --stat for file-level change summary",
+      "git stash list && git stash pop 管理多个 stash | Manage multiple stashes with list and pop",
+      "structuredClone(obj) 深拷贝 (ES2022) | Native deep clone in JavaScript",
+      "Array.at(-1) 优雅获取最后一个元素 | Negative indexing for arrays",
+      "Promise.allSettled() 等所有 Promise 完成 | Wait for all promises regardless of outcome",
+      "?. 可选链 + ?? 空值合并 | Optional chaining with nullish coalescing",
+      "console.table(data) 表格形式打印 | Pretty-print arrays as tables",
+      "Object.groupBy(array, fn) 一行分组 (ES2024) | Native array grouping",
+      "satisfies 检查类型但保留推断 (TS) | Type checking without widening",
+      "as const 创建窄类型常量 | Narrow literal types from constants",
+      "Array.from({length:5}, (_,i) => i) 快速生成序列 | Generate sequences with Array.from",
+      "Map 比 Object 做字典更快，键可以是任意类型 | Map is faster than Object for dictionaries",
+      "using 关键字自动资源管理 (TC39 Stage 3) | using keyword for auto resource disposal",
+      "Promise.withResolvers() 更灵活的 Promise 创建 | Promise.withResolvers() for flexible promise creation",
+      "f'{variable=}' 自动打印变量名和值 (3.8+) | Debug with f-string = syntax",
+      "collections.Counter 一行统计频率 | One-line frequency counting in Python",
+      "pathlib.Path 代替 os.path，更优雅 | pathlib for modern path handling",
+      "@dataclass 自动生成 __init__ __repr__ __eq__ | Dataclasses reduce boilerplate",
+      "@lru_cache 一行实现记忆化缓存 | Instant memoization with lru_cache",
+      "breakpoint() 替代 import pdb; pdb.set_trace() | Modern Python debugging",
+      "python -m json.tool 格式化 JSON | python -m json.tool to pretty-print JSON",
+      "isinstance(x, (int, float)) 检查多种类型 | isinstance with tuple for multi-type checks",
+      "dict | dict2 合并字典 (3.9+) | Merge dicts with | operator (Python 3.9+)",
+      "match/case 结构化模式匹配 (3.10+) | Structural pattern matching (Python 3.10+)",
+      "python -m http.server 8000 一行文件服务器 | Instant file server in one command",
+      "list[::2] 切片步长取偶数位元素 | Slice with step for every nth element",
+      "Ctrl+A 行首 Ctrl+E 行尾 Ctrl+W 删词 | Essential terminal navigation shortcuts",
+      "Ctrl+R 搜索历史命令 | Search command history interactively",
+      "!! 重复上一条命令，sudo !! 提权重跑 | Repeat last command with sudo",
+      "cd - 回到上一个目录 | Quick directory toggle",
+      "command | tee file.txt 同时输出和保存 | Output to screen and file simultaneously",
+      "Ctrl+Z 暂停，fg 恢复，bg 后台运行 | Process control: suspend, foreground, background",
+      "pbcopy/pbpaste 终端和剪贴板互通 (macOS) | Terminal clipboard integration",
+      "realpath file 获取文件的绝对路径 | realpath to get absolute file path",
+      "alias c=claude 设置常用命令别名 | Set aliases for frequent commands in .zshrc",
+      "diff <(cmd1) <(cmd2) 比较两个命令的输出 | Process substitution for comparing outputs",
+      "jq '.key' file.json 命令行 JSON 查询利器 | jq for command-line JSON processing",
+      "watch -n 2 command 每 2 秒刷新命令输出 | watch to repeat commands at intervals",
+      "过早优化是万恶之源 - Knuth | Premature optimization is the root of all evil",
+      "先让代码工作，再正确，最后快速 | Make it work, make it right, make it fast",
+      "好的命名胜过好的注释 | Good naming beats good comments",
+      "删除代码比写代码更有价值 | Deleting code is more valuable than writing it",
+      "YAGNI: 不要提前实现用不到的功能 | You Aren't Gonna Need It",
+      "Bug 不会凭空消失，找到根因 | Bugs don't vanish - find the root cause",
+      "代码被阅读的次数远多于编写的次数 | Code is read far more often than written",
+      "最好的工具是你投入时间定制的工具 | The best tool is one you invest time customizing",
+      "个人化软件的时代已经到来 | The era of personalized software is here",
+      "在未知领域要更勇敢，迭代式解决问题 | Be braver in the unknown; iterate to solve problems",
+      "花时间做计划，但也要快速验证原型 | Plan carefully, but also prototype quickly",
+      "分享知识，回馈社区，教学相长 | Share knowledge, give back, learn by teaching"
+    ]
+  },
+  "skipDangerousModePermissionPrompt": true
+}

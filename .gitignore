@@ -1,0 +1,16 @@
+/shell-snapshots
+/tasks
+/backups
+/file-history
+/paste-cache
+/ide
+/projects
+/sessions
+/todos
+/statsig
+/transcripts
+/plugins
+debug
+cache
+downloads
+session-env
