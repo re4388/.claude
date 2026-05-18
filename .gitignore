@@ -9,8 +9,9 @@
 /todos
 /statsig
 /transcripts
-/plugins
 debug
 cache
 downloads
 session-env
+history.jsonl
+stats-cache.json

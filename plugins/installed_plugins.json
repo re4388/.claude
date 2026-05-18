@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "plugins": {
+    "jdtls-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/re4388/.claude/plugins/cache/claude-plugins-official/jdtls-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-29T04:08:19.198Z",
+        "lastUpdated": "2026-03-29T04:08:19.198Z",
+        "gitCommitSha": "b42f55913e547810b89d5c894be0dee868918864"
+      }
+    ],
+    "typescript-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/re4388/.claude/plugins/cache/claude-plugins-official/typescript-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-29T04:08:28.161Z",
+        "lastUpdated": "2026-03-29T04:08:28.161Z",
+        "gitCommitSha": "b42f55913e547810b89d5c894be0dee868918864"
+      }
+    ],
+    "claude-hud@claude-hud": [
+      {
+        "scope": "user",
+        "installPath": "/Users/re4388/.claude/plugins/cache/claude-hud/claude-hud/0.1.0",
+        "version": "0.1.0",
+        "installedAt": "2026-05-14T12:05:36.419Z",
+        "lastUpdated": "2026-05-14T12:05:36.419Z",
+        "gitCommitSha": "6f7d07323c5615afc08771cebc22073e8c04a946"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/re4388/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0",
+        "version": "5.1.0",
+        "installedAt": "2026-05-17T08:45:56.976Z",
+        "lastUpdated": "2026-05-17T08:45:56.976Z",
+        "gitCommitSha": "f2cbfbefebbfef77321e4c9abc9e949826bea9d7"
+      }
+    ]
+  }
+}
